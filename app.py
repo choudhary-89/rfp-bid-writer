@@ -87,11 +87,6 @@ st.markdown(
             font-weight: 700;
             margin: 0.2rem 0 0.15rem;
         }
-        .section-caption {
-            color: var(--muted);
-            margin: 0 0 1rem;
-            font-size: 0.91rem;
-        }
         .response-placeholder {
             min-height: 16rem;
             display: flex;
@@ -105,31 +100,22 @@ st.markdown(
             background: #FFFFFF;
         }
         .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-heading,
-        .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-caption,
-        .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stCaptionContainer"],
         .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetLabel"],
         .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
         .stApp [data-testid="stVerticalBlockBorderWrapper"] h2,
-        .stApp [data-testid="stVerticalBlockBorderWrapper"] h3,
-        .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stMarkdownContainer"] p {
+        .stApp [data-testid="stVerticalBlockBorderWrapper"] h3 {
             color: #1E293B !important;
         }
         [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-heading,
-        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-caption,
-        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stCaptionContainer"],
         [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetLabel"],
         [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
         [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] h2,
         [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] h3,
-        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stMarkdownContainer"] p,
         .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] .section-heading,
-        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] .section-caption,
-        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stCaptionContainer"],
         .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetLabel"],
         .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
         .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] h2,
-        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] h3,
-        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stMarkdownContainer"] p {
+        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] h3 {
             color: #CBD5E1 !important;
         }
     </style>
@@ -418,10 +404,7 @@ with input_col:
             '<div class="section-heading">Draft your response</div>',
             unsafe_allow_html=True,
         )
-        st.markdown(
-            '<div class="section-caption">Provide the buyer\'s question and choose how your answer should read.</div>',
-            unsafe_allow_html=True,
-        )
+        st.caption("Provide the buyer's question and choose how your answer should read.")
         rfp_question = st.text_area(
             "RFP Question",
             placeholder=(
