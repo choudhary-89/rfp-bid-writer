@@ -104,6 +104,34 @@ st.markdown(
             text-align: center;
             background: #FFFFFF;
         }
+        .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-heading,
+        .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-caption,
+        .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stCaptionContainer"],
+        .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetLabel"],
+        .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
+        .stApp [data-testid="stVerticalBlockBorderWrapper"] h2,
+        .stApp [data-testid="stVerticalBlockBorderWrapper"] h3,
+        .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stMarkdownContainer"] p {
+            color: #1E293B !important;
+        }
+        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-heading,
+        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-caption,
+        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stCaptionContainer"],
+        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetLabel"],
+        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
+        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] h2,
+        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] h3,
+        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stMarkdownContainer"] p,
+        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] .section-heading,
+        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] .section-caption,
+        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stCaptionContainer"],
+        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetLabel"],
+        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
+        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] h2,
+        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] h3,
+        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stMarkdownContainer"] p {
+            color: #CBD5E1 !important;
+        }
     </style>
     """,
     unsafe_allow_html=True,
