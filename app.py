@@ -21,125 +21,34 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-        @media (prefers-color-scheme: dark) {
-            .stApp,
-            .stApp h1,
-            .stApp h2,
-            .stApp h3,
-            .stApp h4,
-            .stApp p,
-            .stApp label,
-            .stApp span,
-            [data-testid="stHeader"],
-            .stApp .section-heading,
-            .stApp .hero-eyebrow {
-                color: #F8FAFC !important;
-            }
-            .stApp .hero {
-                background: linear-gradient(120deg, #0F172A 12%, #1E293B 100%);
-            }
-            .stApp .response-placeholder {
-                color: #F8FAFC !important;
-                background: #1E293B;
-            }
-        }
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-        :root {
-            --ink: #1E293B;
-            --muted: #1E293B;
-            --blue: #1769e0;
-        }
-        .stApp textarea,
-        .stApp input {
-            width: 100% !important;
-            max-width: 100% !important;
-        }
-        .stApp [data-testid="stTextArea"],
-        .stApp [data-testid="stTextInput"],
-        .stApp [data-testid="stSelectbox"] {
-            width: 100% !important;
-            min-width: 0 !important;
-        }
-        .stApp [data-testid="stTextInput"] > div {
-            width: 100% !important;
-            min-width: 0 !important;
-        }
-        .stApp [data-testid="stTextInput"] input {
-            flex: 1 1 0 !important;
-            min-width: 0 !important;
-        }
-        [data-testid="stSidebar"] [data-testid="stExpander"] summary {
-            white-space: normal !important;
-        }
-        [data-baseweb="checkbox"] > div:first-child {
-            border: 1px solid #94A3B8 !important;
-        }
-        .hero {
-            padding: 1.5rem 1.7rem;
-            margin: 0.3rem 0 1.4rem;
-            border-radius: 18px;
-            background: linear-gradient(120deg, #ffffff 12%, #eef5ff 100%);
-        }
-        .hero-eyebrow {
-            color: var(--blue);
-            font-size: 0.76rem;
-            font-weight: 750;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-        .hero h1 {
-            color: var(--ink);
-            font-size: clamp(2rem, 3.5vw, 2.8rem);
-            letter-spacing: -0.04em;
-            line-height: 1.1;
-            margin: 0.35rem 0 0.6rem;
-        }
-        .hero p {
-            color: var(--muted);
-            font-size: 1.02rem;
-            margin: 0;
-        }
-        .section-heading {
-            color: var(--ink);
-            font-size: 1.18rem;
-            font-weight: 700;
-            margin: 0.2rem 0 0.15rem;
-        }
-        .response-placeholder {
-            min-height: 16rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            border-radius: 12px;
-            color: #64748B;
-            text-align: center;
-            background: #FFFFFF;
-        }
-        .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-heading,
-        .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetLabel"],
-        .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
-        .stApp [data-testid="stVerticalBlockBorderWrapper"] h2,
-        .stApp [data-testid="stVerticalBlockBorderWrapper"] h3 {
+    /* 1. GLOBAL BASE STYLES */
+    .stApp {
+        box-sizing: border-box;
+    }
+
+    /* 2. EXPLICIT LIGHT MODE RULES */
+    @media (prefers-color-scheme: light) {
+        .stApp, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp p, .stApp label, .stApp span, .stApp div, .stApp caption {
             color: #1E293B !important;
         }
-        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] .section-heading,
-        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetLabel"],
-        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
-        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] h2,
-        [data-theme="dark"] .stApp [data-testid="stVerticalBlockBorderWrapper"] h3,
-        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] .section-heading,
-        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetLabel"],
-        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
-        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] h2,
-        .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] h3 {
+        /* Keep input field placeholders readable in light mode */
+        .stApp input, .stApp textarea {
+            color: #1E293B !important;
+            background-color: #F8FAFC !important;
+        }
+    }
+
+    /* 3. EXPLICIT DARK MODE RULES */
+    @media (prefers-color-scheme: dark) {
+        .stApp, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp p, .stApp label, .stApp span, .stApp div, .stApp caption {
             color: #F8FAFC !important;
         }
+        /* Adjust input field backgrounds for dark mode visibility */
+        .stApp input, .stApp textarea {
+            color: #F8FAFC !important;
+            background-color: #1E1E1E !important;
+        }
+    }
     </style>
     """,
     unsafe_allow_html=True,
