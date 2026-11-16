@@ -18,43 +18,6 @@ st.set_page_config(
 )
 
 
-st.markdown(
-    """
-    <style>
-    /* 1. GLOBAL BASE STYLES */
-    .stApp {
-        box-sizing: border-box;
-    }
-
-    /* 2. EXPLICIT LIGHT MODE RULES */
-    @media (prefers-color-scheme: light) {
-        .stApp, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp p, .stApp label, .stApp span, .stApp div, .stApp caption {
-            color: #1E293B !important;
-        }
-        /* Keep input field placeholders readable in light mode */
-        .stApp input, .stApp textarea {
-            color: #1E293B !important;
-            background-color: #F8FAFC !important;
-        }
-    }
-
-    /* 3. EXPLICIT DARK MODE RULES */
-    @media (prefers-color-scheme: dark) {
-        .stApp, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp p, .stApp label, .stApp span, .stApp div, .stApp caption {
-            color: #F8FAFC !important;
-        }
-        /* Adjust input field backgrounds for dark mode visibility */
-        .stApp input, .stApp textarea {
-            color: #F8FAFC !important;
-            background-color: #1E1E1E !important;
-        }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-
 def extract_knowledge_base(files):
     """Extract text from uploaded PDFs and text files, reporting per-file errors."""
     extracted_parts = []
