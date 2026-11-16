@@ -21,6 +21,28 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+        @media (prefers-color-scheme: dark) {
+            .stApp,
+            .stApp h1,
+            .stApp h2,
+            .stApp h3,
+            .stApp h4,
+            .stApp p,
+            .stApp label,
+            .stApp span,
+            [data-testid="stHeader"],
+            .stApp .section-heading,
+            .stApp .hero-eyebrow {
+                color: #F8FAFC !important;
+            }
+            .stApp .hero {
+                background: linear-gradient(120deg, #0F172A 12%, #1E293B 100%);
+            }
+            .stApp .response-placeholder {
+                color: #F8FAFC !important;
+                background: #1E293B;
+            }
+        }
         *,
         *::before,
         *::after {
@@ -116,7 +138,7 @@ st.markdown(
         .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] [data-testid="stWidgetHelp"],
         .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] h2,
         .stApp[data-theme="dark"] [data-testid="stVerticalBlockBorderWrapper"] h3 {
-            color: #CBD5E1 !important;
+            color: #F8FAFC !important;
         }
     </style>
     """,
